@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from '../../assets/images/logo.svg';
-import './App.scss';
+import React from "react";
+import logo from "../../assets/images/logo.svg";
+import "./App.scss";
 
-const Main = () => {
+const Main = (): JSX.Element => {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +21,6 @@ const Main = () => {
       </header>
     </div>
   );
-}
+};
 
 export default Main;
