@@ -5,7 +5,7 @@ import "./home.scss";
 const Main = (): JSX.Element => {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" data-testid="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/Main.tsx</code> and save to reload.
