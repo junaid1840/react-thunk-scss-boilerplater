@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React Home](https://github.com/facebook/create-react-app).
 
+## Install all packages
+
+### `npm install`
+
+## Setup linter & prettier (JetBrains IDE)
+
+1. Go to Settings-> Languages & Frameworks -> JavaScript -> Prettier : Tick both check boxes at the bottom of the page.
+2. Go to Settings-> Languages & Frameworks -> JavaScript -> Code Quality Tools -> ESLint: Change selected radio button to Automatic ESLint configuration & Tick Check box to Run on save
+3. Go to Settings-> Appearance & Behavior ->  System Settings: In Autosave section Tick the`Save files if the IDE is idle for... ` And set it accordingly 2s-5s is recommended.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
