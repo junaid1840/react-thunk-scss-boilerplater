@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
 import "./main.scss";
+import routes from "../../routes/routes";
+import RouteWithSubRoutes from "../../routes/routeWithSubRoutes";
 
 export const Main = (): JSX.Element => {
   return (
@@ -19,6 +21,8 @@ export const Main = (): JSX.Element => {
           Learn React
         </a>
       </header>
+      {<RouteWithSubRoutes routes={routes} />}
     </div>
+    // Add footer here
   );
 };
