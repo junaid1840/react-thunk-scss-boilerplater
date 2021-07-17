@@ -1,11 +1,11 @@
 import iRoutes from "./routesInterface";
-import Home from "../layout/main/Home";
+import { Main } from "../layout/main/Main";
 
 const routes: iRoutes[] = [
   {
     path: "/",
     exact: true,
-    component: Home,
+    component: Main,
   },
 ];
 
