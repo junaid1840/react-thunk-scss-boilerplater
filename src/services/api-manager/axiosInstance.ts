@@ -1,8 +1,7 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { ApiErrorHandler } from "./apiUtilities";
-import { iFailedRequest } from "./apiManagerInterfaces";
 
-const axiosInstance: AxiosInstance = axios.create({
+export const axiosInstance: AxiosInstance = axios.create({
   baseURL: "https://internal-backend.polinate.io/api/",
   responseType: "json",
   validateStatus: (status: number) => status >= 200 && status < 399,
@@ -15,8 +14,8 @@ const axiosInstance: AxiosInstance = axios.create({
 // Add a response interceptor
 axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => response,
-  async (failedRequest: iFailedRequest) =>
-    ApiErrorHandler[failedRequest?.response?.data](failedRequest)
+  async (failedRequest: AxiosResponse) =>
+    failedRequest.status === 412
+      ? ApiErrorHandler[failedRequest.status](failedRequest)
+      : ApiErrorHandler[999](failedRequest)
 );
-
-export default axiosInstance;
