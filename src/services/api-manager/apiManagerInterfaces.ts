@@ -5,7 +5,7 @@ export interface iErrorHandler {
 }
 
 export interface iApiResponse {
-  response: iApiResponse;
+  response: any;
   error: boolean;
   message: string;
   action: string;
