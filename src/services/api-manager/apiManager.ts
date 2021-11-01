@@ -1,4 +1,4 @@
-import axiosInstance from "./axiosInstance";
+import { axiosInstance } from "./axiosInstance";
 import { AxiosResponse } from "axios";
 
 type axiosMethodTypes = "GET" | "POST" | "DELETE" | "PUT" | "PATCH";
@@ -8,7 +8,7 @@ const apiManager = {
     url: string,
     body: unknown,
     method: axiosMethodTypes
-  ): Promise<AxiosResponse | any> => {
+  ): Promise<AxiosResponse> => {
     try {
       return axiosInstance({
         method: method,
