@@ -1,18 +1,24 @@
 import { Dispatch } from "redux";
-import { getCategoryService } from "../../../services/apiServices/getCategoryService";
+import {
+  failureService,
+  successService,
+} from "../../../services/apiServices/getCategoryService";
 import { getCategoryDropdownAction } from "../../actions/book/bookAction";
-import { iGetCategoryOptionsActionType } from "../../types/book/bookType";
-import { customDispatch } from "../../../services/api-manager/apiUtilities";
 import { iApiResponse } from "../../../services/api-manager/apiManagerInterfaces";
+import { iGetCategoryOptionsActionType } from "../../types/book/bookType";
 
-export const getCategoryDropDownEffect =
-  () =>
-  async (
-    dispatch: Dispatch<iGetCategoryOptionsActionType>
-  ): Promise<iApiResponse> => {
-    const response = await getCategoryService();
-    return customDispatch(
-      dispatch(getCategoryDropdownAction(response.response)),
-      response
-    );
-  };
+export const successEffect = async (
+  dispatch: Dispatch<iGetCategoryOptionsActionType>
+): Promise<iApiResponse> => {
+  const data = await successService();
+  !data.error && dispatch(getCategoryDropdownAction(data.response));
+  return data;
+};
+
+export const failureEffect = async (
+  dispatch: Dispatch<iGetCategoryOptionsActionType>
+): Promise<iApiResponse> => {
+  const data = await failureService();
+  !data.error && dispatch(getCategoryDropdownAction(data.response));
+  return data;
+};
