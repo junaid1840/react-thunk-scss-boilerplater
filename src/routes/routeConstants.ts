@@ -1,3 +1,3 @@
-export const RoutesPath = {
-  HomePage: "/",
+export const ROUTES = {
+  HOME_PAGE: "/",
 };
