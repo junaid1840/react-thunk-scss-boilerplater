@@ -5,7 +5,7 @@ import {
 } from "../../types/book/bookType";
 
 const initialBookState: iBookStateType = {
-  categoryDropdownOptions: [],
+  categoryDropdownOptions: "",
 };
 
 export const bookReducer = (

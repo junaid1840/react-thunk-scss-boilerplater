@@ -4,7 +4,7 @@ import {
 } from "../../types/book/bookType";
 
 export const getCategoryDropdownAction = (
-  categoryDropdownItems: any
+  categoryDropdownItems: string
 ): iGetCategoryOptionsActionType => ({
   type: GET_CATEGORY_DROPDOWN_ITEMS,
   payload: categoryDropdownItems,
