@@ -1,17 +1,13 @@
-import { AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 
 export interface iErrorHandler {
   [statusCode: number]: (failedRequest: AxiosResponse<iApiResponse>) => void;
 }
 
+//TODO: Define response type
 export interface iApiResponse {
-  response: any;
+  response: string;
   error: boolean;
   message: string;
-  action: string;
-}
-
-export interface iFailedRequest {
-  response: AxiosResponse;
-  config: AxiosRequestConfig;
+  status: number;
 }
