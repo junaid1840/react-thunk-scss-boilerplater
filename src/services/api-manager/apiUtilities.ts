@@ -68,23 +68,12 @@ const refreshUserToken = async (
   };
   // setAccessTokenInLocalStorage(userTokens);
   // empty the Failed api queue
-  remakeFailedApiCalls(data.response);
+  remakeFailedApiCalls(null);
   isRefreshing = false;
   // returning the failed api call config in axios to re make the request
   return axiosInstance(failedRequest.config);
 };
 
-export const customDispatch = (
-  dispatchAction: any,
-  response: iApiResponse
-): iApiResponse => {
-  !response.error && dispatchAction(response.response);
-  return response;
-};
-
 export const ApiErrorHandler: iErrorHandler = {
-  // when Jwt Expires and api returns locked error
-  999: throwError,
-  // refresh token logic
   412: refreshUserToken,
 };
