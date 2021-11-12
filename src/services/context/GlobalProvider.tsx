@@ -3,7 +3,7 @@ import { GlobalContext } from "./GlobalContext";
 import { useDispatch } from "react-redux";
 import { iApiResponse } from "../api-manager/apiManagerInterfaces";
 import { Dispatch } from "redux";
-import { iGetCategoryOptionsActionType } from "../../redux/types/book/bookType";
+import { bookActionTypes } from "../../redux/types/book/bookType";
 
 interface iGlobalProviderProps {
   children: ReactChild;
@@ -15,12 +15,11 @@ export const GlobalProvider: FC<iGlobalProviderProps> = ({
   const [showLoader, setShowLoader] = useState(false);
 
   const globalDispatch = async (
-    effect: (
-      dispatch: Dispatch<iGetCategoryOptionsActionType>
-    ) => Promise<iApiResponse>
-  ): Promise<void> => {
+    effect: (dispatch: Dispatch<bookActionTypes>) => Promise<iApiResponse>
+  ): Promise<iApiResponse> => {
     const data = await dispatch(effect);
-    console.log(data);
+    setShowLoader(false);
+    return data as unknown as iApiResponse;
   };
 
   return (
