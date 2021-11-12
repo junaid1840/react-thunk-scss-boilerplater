@@ -1,12 +1,12 @@
 import iRoutes from "./routesInterface";
 import { Home } from "../component/home/Home";
-import { RoutesPath } from "./routeConstants";
+import { ROUTES } from "./routeConstants";
 
-const { HomePage } = RoutesPath;
+const { HOME_PAGE } = ROUTES;
 
 const routes: iRoutes[] = [
   {
-    path: HomePage,
+    path: HOME_PAGE,
     exact: true,
     component: Home,
   },
