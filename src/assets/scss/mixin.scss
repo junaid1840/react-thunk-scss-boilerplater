@@ -1,0 +1,30 @@
+@import './_variables.scss';
+@mixin d_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@mixin margin_auto{
+  margin: 0 auto;
+  position: relative;
+}
+@mixin position_rel{ position: relative;}
+@mixin position_abs_left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@mixin position_abs_right{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@mixin _before_position_abs{
+  content:"";
+  @include position_abs_left;
+}
+@mixin _after_position_abs{
+  content:"";
+  @include position_abs_left;
+}
