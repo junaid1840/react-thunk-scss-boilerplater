@@ -1,10 +1,11 @@
+@import "./mixin";
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-.img-responsive {
-  width: 100%;
+.w-100 {
+  width: $w_100;
 }
 .list-none {
   margin: 0;
@@ -17,8 +18,14 @@
 .d-block {
   display: block;
 }
-.no-padding{
+.d-none {
+  display: none;
+}
+.no-padding {
   padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
 }
 input[type="submit"],
 button {
@@ -42,52 +49,44 @@ input[type="tel"],
 input[type="number"],
 input[type="date"],
 select{
-  color:#000;
+  color:$main_color;
 }
 input[type="date"]::-webkit-calendar-picker-indicator{
-  background: transparent;
-  bottom: 0;
-  color: transparent;
+  background: $transparent;
+  color: $transparent;
   cursor: pointer;
   height: auto;
-  left: 0;
-  position: absolute;
+  @include position_abs_left;
   right: 0;
-  top: 0;
+  bottom: 0;
   width: auto;
 }
 body {
   margin: 0;
   color: var(--body-text-color);
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust:  $w_100;
   -ms-text-size-adjust: none;
-  font: 400 16px/20px "Poppins", sans-serif;
-  background: #fff;
-  overflow-x: hidden;
-
+  font: 400 16px/20px "Roboto", sans-serif;
+  background: $second_color;
+  overflow-x: $hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*:focus {
-  outline: none;
-}
-.transition{
-  transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-}
+*:focus {outline: none;}
+.transition{ @include transition;}
 #wrapper {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+  width: $w_100;
+  position: $position_rel;
+  overflow: $hidden;
 }
 .container{
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 1200px;
+  max-width: $w_100;
   padding: 0 15px;
+  @include margin_auto;
 }
 .container.fluid{
-  width:100%;
+  width: $w_100;
   max-width: none;
 }
 .container:after {
@@ -95,3 +94,6 @@ body {
   clear: both;
   content: '';
 }
+.main-bg { background: $main_color;}
+
+
