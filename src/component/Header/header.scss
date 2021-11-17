@@ -2,6 +2,11 @@
 #main-header {
   @include d_flex;
   padding: 0 0;
+  .header-logo{
+    a img {
+      width: 150px;
+    }
+  }
   .header-logo { align-self: center}
   .header-content-wrap {
     display: $flex;
@@ -10,14 +15,29 @@
     //Start Css for Navigation
     .header-navigation {
       align-self: center;
-      .menu-btn {
+      @include transition;
+      .open-menu-btn,.close-menu-btn {
         width: 50px;
         height: 50px;
-        position: $position_abs;
+        position: fixed;
         display: none;
+        padding: 10px;
+        left: 0;
+        top: 0;
+        background: $main_color;
+        border-radius: 0 5px 5px 0;
+      }
+      //&.active {}
+      .close-menu-btn {
+        right: 0;
+        left: unset;
+        position: $position_abs;
+        padding: 13px;
+        z-index: 1;
       }
       & > ul {
         @include flex_ul;
+        position: $position_rel;
         li{
           list-style: none;
           padding: 10px 19px;

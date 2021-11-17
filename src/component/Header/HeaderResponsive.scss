@@ -1,10 +1,124 @@
 //For Tabs
-@media (min-width:768px) and (max-width:990px){}
+@media (min-width:768px) and (max-width:990px){
+  #main-header{
+    padding: 5px 0;
+    .header-logo{
+      justify-content: center;
+      display: flex;
+      a img {
+        width: 100px;
+      }
+    }
+    .header-content-wrap {
+      & > div { flex-grow: 3}
+      .header-navigation {
+        position: fixed;
+        top: 0;
+        background: #000;
+        width: 250px;
+        left: -100%;
+        z-index: 999;
+        height: 100vh;
+        padding-top: 0;
+        &.active {left: 0;}
+        .open-menu-btn,.close-menu-btn { display: block}
+        & > ul {
+          flex-direction: column;
+          background: #000;
+          padding-top: 35px;
+          li {
+            a {
+              padding: 2px 0;
+            }
+          }
+        }
+      }
+      .user-profile {
+        justify-content: right;
+        display: flex;
+        flex: 0 0 60px;
+        &.active section{
+          margin-top: 10px;
+        }
+        span { display: none}
+        .arrow-down { margin-top: 12px}
+      }
+    }
+  }
+}
 
 //For Mobile Landscape
 @media (max-width:767px){
   #main-header{
-    h1 {font-size: 20px;}
+    padding: 5px 0;
+    .header-logo{
+      justify-content: center;
+      display: flex;
+      a img {
+        width: 100px;
+      }
+    }
+    .header-content-wrap {
+      & > div { flex-grow: 3}
+      .header-navigation {
+        position: fixed;
+        top: 0;
+        background: #000;
+        width: 250px;
+        left: -100%;
+        z-index: 999;
+        height: 100vh;
+        padding-top: 0;
+        overflow: auto;
+        &.active {left: 0;}
+        .open-menu-btn,.close-menu-btn { display: block}
+        & > ul {
+          flex-direction: column;
+          background: #000;
+          padding-top: 35px;
+          li {
+            display: block;
+            padding: 5px 19px;
+            font-size: 16px;
+            .drop-down-arrow {
+              position: absolute;
+              right: 4px;
+              top: 3px;
+              width: 28px;
+              height: 28px;
+              padding: 5px;
+              background: #333;
+              border-radius: 3px;
+            }
+            a {
+              padding: 2px 0;
+            }
+          }
+        }
+      }
+      .dropdownList {
+        position: relative;
+        padding: 6px 15px;
+        width: 100%;
+        background: #222;
+        margin: 13px 0 0;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        &:before { display: none}
+        &.active { display: block;}
+      }
+      .user-profile {
+        justify-content: right;
+        display: flex;
+        flex: 0 0 60px;
+        &.active section{
+          margin-top: 10px;
+        }
+        span { display: none}
+        .arrow-down { margin-top: 12px}
+      }
+    }
   }
 }
 

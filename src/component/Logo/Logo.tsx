@@ -6,7 +6,7 @@ export const Logo: FC = () => {
     return (
         <>
             <div className="header-logo">
-                <NavLink to="/"><img src={logo} alt="logo" width="150px" /></NavLink>
+                <NavLink to="/"><img src={logo} alt="logo" /></NavLink>
             </div>
         </>
     );
