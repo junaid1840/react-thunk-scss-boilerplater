@@ -1,0 +1,58 @@
+@import "../../assets/scss/mixin";
+//Start accordion style
+#accordions {
+  @include d_flex_column;
+  padding: 100px 0;
+  .accordions-box {
+    @include d_flex_column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 0 10px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+    .accordions-title {
+      cursor: pointer;
+      position: $position_rel;
+      padding: .75rem 1.25rem;
+      h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      span {
+        position: $position_abs;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 23px;
+        background: #000;
+        color: #fff;
+        width: 27px;
+        height: 27px;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 100%;
+      }
+    }
+    .accordions-content-wrap {
+      max-height: 0;
+      transition: max-height 0.15s ease-out;
+      overflow: hidden;
+      &.active {
+        max-height: 200px;
+        transition: max-height 0.25s ease-in;
+        opacity: 1;
+      }
+      .accordions-content {
+        padding: 1.25rem;
+        border-top: 1px solid #ddd;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+//End accordion style
+
+
+

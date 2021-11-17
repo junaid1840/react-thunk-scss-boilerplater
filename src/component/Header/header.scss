@@ -24,6 +24,7 @@
         padding: 10px;
         left: 0;
         top: 0;
+        cursor: pointer;
         background: $main_color;
         border-radius: 0 5px 5px 0;
       }
@@ -47,6 +48,7 @@
           cursor: pointer;
           .drop-down-arrow {
             width: 15px;
+            pointer-events: none;
             margin: 0 0 0 4px;
             @include transition;
           }

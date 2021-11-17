@@ -5,6 +5,11 @@
   justify-content: center;
   align-items: center;
 }
+@mixin d_flex_column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 @mixin margin_auto{
   margin: 0 auto;
   position: relative;
