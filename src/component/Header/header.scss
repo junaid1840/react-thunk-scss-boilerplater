@@ -1,5 +1,5 @@
 @import "../../assets/scss/mixin";
-#main-header {
+#header {
   @include d_flex;
   padding: 0 0;
   .header-logo{
@@ -24,7 +24,7 @@
         padding: 10px;
         left: 0;
         top: 0;
-        background: $main_color;
+        background: $dark_color;
         border-radius: 0 5px 5px 0;
       }
       //&.active {}
@@ -57,7 +57,7 @@
           }
           &:hover .drop-down-arrow { transform: scaleY(-1)}
           a {
-            color: $second_color;
+            color: $white_color;
             text-decoration: none;
             display: block;
             padding: 20px 0;
@@ -116,7 +116,7 @@
         height: 40px;
       }
       span {
-        color: $second_color;
+        color: $white_color;
         display: inline-block;
         padding: 9px 0 0 10px;
         font-size: 13px;
@@ -142,7 +142,7 @@
         flex-direction: column;
         border-radius: 5px;
         width: 160px;
-        background: $main_color;
+        background: $dark_color;
         margin: 0 0 0;
         visibility: hidden;
         opacity: 0;
@@ -150,7 +150,7 @@
           display: block;
           padding: 4px 0;
           font-size: 13px;
-          color: $second_color;
+          color: $white_color;
           text-decoration: none;
         }
       }

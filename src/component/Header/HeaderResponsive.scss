@@ -15,7 +15,7 @@
       .header-navigation {
         position: fixed;
         top: 0;
-        background: #000;
+        background: $dark_color;
         width: 250px;
         left: -100%;
         z-index: 999;
@@ -25,7 +25,7 @@
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
           flex-direction: column;
-          background: #000;
+          background: $dark_color;
           padding-top: 35px;
           li {
             a {
@@ -64,7 +64,7 @@
       .header-navigation {
         position: fixed;
         top: 0;
-        background: #000;
+        background: $dark_color;
         width: 250px;
         left: -100%;
         z-index: 999;
@@ -75,7 +75,7 @@
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
           flex-direction: column;
-          background: #000;
+          background: $dark_color;
           padding-top: 35px;
           li {
             display: block;

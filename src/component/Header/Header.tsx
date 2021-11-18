@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import './Header.scss';
 import './HeaderResponsive.scss';
-import {Logo} from "../Logo/Logo";
-import {UserProfile} from "../UserProfile/UserProfile";
+import {Logo} from "./Logo";
+import {UserProfile} from "./UserProfile";
 import { NavLink } from 'react-router-dom';
 
 export const Header: FC = () => {
