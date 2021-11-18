@@ -4,16 +4,33 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+@font-face {
+  font-family: 'ArialMT';
+  src: url('../fonts/ArialMTBlack.woff2') format('woff2'),
+  url('../fonts/ArialMTBlack.woff') format('woff'),
+  url('../fonts/ArialMTBlack.ttf') format('truetype');
+  @include font_face_design;
+}
+body {
+  margin: 0;
+  color: var(--body-text-color);
+  -webkit-text-size-adjust:  $w_100;
+  -ms-text-size-adjust: none;
+  font-size: 16px;
+  font-family: 'ArialMT', serif;
+  background: $white_color;
+  overflow-x: $hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .w-100 {
   width: $w_100;
 }
-.list-none {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.list-style-none {
+  @include list_style_none;
 }
-.word-break{
-  word-break: break-word;
+.text-break{
+  overflow-wrap: break-word;
 }
 .d-block {
   display: block;
@@ -49,7 +66,7 @@ input[type="tel"],
 input[type="number"],
 input[type="date"],
 select{
-  color:$main_color;
+  color:$dark_color;
 }
 input[type="date"]::-webkit-calendar-picker-indicator{
   background: $transparent;
@@ -60,17 +77,6 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   right: 0;
   bottom: 0;
   width: auto;
-}
-body {
-  margin: 0;
-  color: var(--body-text-color);
-  -webkit-text-size-adjust:  $w_100;
-  -ms-text-size-adjust: none;
-  font: 400 16px/20px "Roboto", sans-serif;
-  background: $second_color;
-  overflow-x: $hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 *:focus {outline: none;}
 .transition{ @include transition;}
@@ -83,7 +89,7 @@ body {
   width: 1200px;
   max-width: $w_100;
   padding: 0 15px;
-  @include margin_auto;
+  margin: $margin_auto;
 }
 .container.fluid{
   width: $w_100;
@@ -94,6 +100,6 @@ body {
   clear: both;
   content: '';
 }
-.main-bg { background: $main_color;}
+.main-bg { background: $dark_color;}
 
 

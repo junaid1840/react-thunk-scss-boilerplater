@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import './Header.scss';
 import './HeaderResponsive.scss';
 import {Logo} from "../Logo/Logo";
@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 export const Header: FC = () => {
     return (
         <>
-            <div id="main-header" className="main-header w-100 main-bg">
+            <header id="header" className="w-100 main-bg">
                 <div className="container">
                     <div className="header-content-wrap">
                         {/*End Component*/}
@@ -43,7 +43,7 @@ export const Header: FC = () => {
                         {/*End UserProfile Component*/}
                     </div>
                 </div>
-            </div>
+            </header>
         </>
     );
 }

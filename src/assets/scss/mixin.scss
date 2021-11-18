@@ -5,22 +5,23 @@
   justify-content: center;
   align-items: center;
 }
-@mixin margin_auto{
-  margin: 0 auto;
-  position: relative;
+@mixin d_flex_column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 @mixin position_abs_left {
-  position: absolute;
+  position: $position_abs;
   left: 0;
   top: 0;
 }
-@mixin transition{
+@mixin transition {
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
 }
 @mixin position_abs_right{
-  position: absolute;
+  position: $position_abs;
   right: 0;
   top: 0;
 }
@@ -41,4 +42,13 @@
 @mixin user_img {
   border-radius: 100%;
   object-fit: cover;
+}
+@mixin list_style_none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin font_face_design {
+  font-style: normal;
+  font-display: swap;
 }
