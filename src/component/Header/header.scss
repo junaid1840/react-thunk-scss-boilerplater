@@ -20,7 +20,7 @@
         width: 50px;
         height: 50px;
         position: fixed;
-        display: none;
+        display: $d_none;
         padding: 10px;
         left: 0;
         top: 0;
@@ -39,7 +39,7 @@
         @include flex_ul;
         position: $position_rel;
         li{
-          list-style: none;
+          list-style: $d_none;
           padding: 10px 19px;
           font-size: 18px;
           position: $position_rel;
@@ -58,8 +58,8 @@
           &:hover .drop-down-arrow { transform: scaleY(-1)}
           a {
             color: $white_color;
-            text-decoration: none;
-            display: block;
+            text-decoration: $d_none;
+            display: $d_block;
             padding: 20px 0;
           }
         }
@@ -109,7 +109,7 @@
     .user-profile {
       align-self: center;
       position: $position_rel;
-      a {display: block;}
+      a {display: $d_block;}
       img {
         @include user_img;
         width: 40px;
@@ -147,11 +147,11 @@
         visibility: hidden;
         opacity: 0;
         a {
-          display: block;
+          display: $d_block;
           padding: 4px 0;
           font-size: 13px;
           color: $white_color;
-          text-decoration: none;
+          text-decoration: $d_none;
         }
       }
       &.active section {

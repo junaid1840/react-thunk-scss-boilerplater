@@ -17,10 +17,11 @@
         top: 0;
         background: $dark_color;
         width: 250px;
-        left: -100%;
+        left: -$w_100;
         z-index: 999;
         height: 100vh;
         padding-top: 0;
+        overflow: auto;
         &.active {left: 0;}
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
@@ -28,11 +29,36 @@
           background: $dark_color;
           padding-top: 35px;
           li {
+            display: $d_block;
+            padding: 5px 19px;
+            font-size: 16px;
+            .drop-down-arrow {
+              position: absolute;
+              right: 4px;
+              top: 3px;
+              width: 28px;
+              height: 28px;
+              padding: 5px;
+              background: #333;
+              border-radius: 3px;
+            }
             a {
               padding: 2px 0;
             }
           }
         }
+      }
+      .dropdownList {
+        position: $position_rel;
+        padding: 6px 15px;
+        width: $w_100;
+        background: #222;
+        margin: 13px 0 0;
+        display: $d_none;
+        opacity: 1;
+        visibility: visible;
+        &:before { display: $d_none}
+        &.active { display: $d_block;}
       }
       .user-profile {
         justify-content: right;
@@ -41,7 +67,11 @@
         &.active section{
           margin-top: 10px;
         }
-        span { display: none}
+        section {
+          border: 1px solid $white_color;
+          z-index: 999;
+        }
+        span { display: $d_none}
         .arrow-down { margin-top: 12px}
       }
     }
@@ -66,7 +96,7 @@
         top: 0;
         background: $dark_color;
         width: 250px;
-        left: -100%;
+        left: -$w_100;
         z-index: 999;
         height: 100vh;
         padding-top: 0;
@@ -78,9 +108,15 @@
           background: $dark_color;
           padding-top: 35px;
           li {
-            display: block;
+            display: $d_block;
             padding: 5px 19px;
             font-size: 16px;
+            &:hover .dropdownList { margin-top: 13px;}
+            &.active .dropdownList { display: $d_block;}
+            &.active .drop-down-arrow {
+              transform: scaleY(-1) !important;
+            }
+            &:hover .drop-down-arrow {transform: scaleY(1)}
             .drop-down-arrow {
               position: absolute;
               right: 4px;
@@ -90,6 +126,7 @@
               padding: 5px;
               background: #333;
               border-radius: 3px;
+              pointer-events: unset;
             }
             a {
               padding: 2px 0;
@@ -98,16 +135,15 @@
         }
       }
       .dropdownList {
-        position: relative;
+        position: $position_rel;
         padding: 6px 15px;
-        width: 100%;
+        width: $w_100;
         background: #222;
         margin: 13px 0 0;
-        display: none;
+        display: $d_none;
         opacity: 1;
         visibility: visible;
-        &:before { display: none}
-        &.active { display: block;}
+        &:before { display: $d_none}
       }
       .user-profile {
         justify-content: right;
@@ -116,7 +152,11 @@
         &.active section{
           margin-top: 10px;
         }
-        span { display: none}
+        section {
+          border: 1px solid $white_color;
+          z-index: 999;
+        }
+        span { display: $d_none}
         .arrow-down { margin-top: 12px}
       }
     }

@@ -36,10 +36,10 @@ body {
   overflow-wrap: break-word;
 }
 .d-block {
-  display: block;
+  display: $d_block;
 }
 .d-none {
-  display: none;
+  display: $d_none;
 }
 .no-padding {
   padding: 0 !important;
@@ -53,13 +53,13 @@ button {
 }
 img {
   vertical-align: top;
-  border-style: none;
+  border-style: $d_none;
 }
 button:focus,
 textarea:focus,
 input:focus,
 select {
-  outline: none;
+  outline: $d_none;
 }
 textarea,
 input[type="text"],
@@ -81,7 +81,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   bottom: 0;
   width: auto;
 }
-*:focus {outline: none;}
+*:focus {outline: $d_none;}
 .transition{ @include transition;}
 #wrapper {
   width: $w_100;
@@ -96,7 +96,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 }
 .container.fluid{
   width: $w_100;
-  max-width: none;
+  max-width: $d_none;
 }
 .container:after {
   display:block;
