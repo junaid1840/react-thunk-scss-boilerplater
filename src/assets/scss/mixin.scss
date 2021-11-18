@@ -10,6 +10,10 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+@mixin max_width {
+  width: auto;
+  max-width: $w_100;
+}
 @mixin position_abs_left {
   position: $position_abs;
   left: 0;
