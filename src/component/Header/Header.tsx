@@ -5,9 +5,9 @@ import './HeaderResponsive.scss';
 function Header() {
     return (
         <>
-            <div id="main-header" className="main-header">
+            <header id="header">
                 <h1>Hello</h1>
-            </div>
+            </header>
         </>
     );
 }
