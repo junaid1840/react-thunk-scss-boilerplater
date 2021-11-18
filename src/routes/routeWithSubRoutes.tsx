@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Route, Switch } from "react-router-dom";
-import iRoutes from "./routesInterface";
+import { iRoutes } from "./routesInterface";
 import { FC } from "react";
 
 export interface iSubRoutesProps {
   routes?: iRoutes[];
 }
 
-const RouteWithSubRoutes: FC<iSubRoutesProps> = ({
+export const RouteWithSubRoutes: FC<iSubRoutesProps> = ({
   routes,
 }: iSubRoutesProps) => {
   return (
@@ -31,5 +31,3 @@ const RouteWithSubRoutes: FC<iSubRoutesProps> = ({
     </Switch>
   );
 };
-
-export default RouteWithSubRoutes;

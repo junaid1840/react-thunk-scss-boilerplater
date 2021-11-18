@@ -1,12 +1,13 @@
-import iRoutes from "./routesInterface";
-import { Main } from "../layout/main/Main";
+import { iRoutes } from "./routesInterface";
+import { Home } from "../component/home/Home";
+import { ROUTES } from "./routeConstants";
 
-const routes: iRoutes[] = [
+const { HOME_PAGE } = ROUTES;
+
+export const routes: iRoutes[] = [
   {
-    path: "/",
+    path: HOME_PAGE,
     exact: true,
-    component: Main,
+    component: Home,
   },
 ];
-
-export default routes;
