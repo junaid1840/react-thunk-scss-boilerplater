@@ -1,5 +1,6 @@
+@import "../../assets/scss/mixin";
 //For Tabs
-@media (min-width:768px) and (max-width:990px){
+@media (min-width:$breakpoint_min_tablet) and (max-width:$breakpoint_max_tablet){
   #main-header{
     padding: 5px 0;
     .header-logo{
@@ -48,7 +49,7 @@
 }
 
 //For Mobile Landscape
-@media (max-width:767px){
+@media (max-width:$breakpoint_mobile_landscape){
   #main-header{
     padding: 5px 0;
     .header-logo{
@@ -123,10 +124,10 @@
 }
 
 //For Mobiles
-@media (max-width:600px){}
+@media (max-width:$breakpoint_mobile_portrait){}
 
 //For small Mobiles
-@media (max-width:320px){}
+@media (max-width:$breakpoint_small_portrait){}
 
 //For Ipad Pro and mini laptops
-@media screen and (min-width:991px) and (max-width:1200px){}
+@media screen and (min-width:$breakpoint_min_laptop) and (max-width:$breakpoint_max_laptop){}

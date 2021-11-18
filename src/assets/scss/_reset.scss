@@ -26,6 +26,9 @@ body {
 .w-100 {
   width: $w_100;
 }
+.max-width {
+  @include max_width;
+}
 .list-style-none {
   @include list_style_none;
 }
