@@ -1,8 +1,8 @@
 import React, {FC, useState} from 'react';
-import './Header.scss';
+import './header.scss';
 import './HeaderResponsive.scss';
-import {Logo} from "../Logo/Logo";
-import {UserProfile} from "../UserProfile/UserProfile";
+import {Logo} from "./Logo";
+import {UserProfile} from "./UserProfile";
 import { NavLink } from 'react-router-dom';
 
 export const Header: FC = () => {
@@ -16,12 +16,9 @@ export const Header: FC = () => {
     const DropdownToggle = () => {dropdownToggled ? setDropdownToggled(false) : setDropdownToggled(true);}
     // End dropdown function for menu
 
-
-
-
     return (
         <>
-            <div id="main-header" className="main-header w-100 main-bg">
+            <div id="header" className="w-100 main-bg">
                 <div className="container">
                     <div className="header-content-wrap">
                         {/*End Component*/}

@@ -2,8 +2,8 @@ import iRoutes from "./routesInterface";
 import { Home } from "../component/home/Home";
 import { ROUTES } from "./routeConstants";
 import { Header } from "../component/Header/Header";
-import {Logo} from "../component/Logo/Logo";
-import {UserProfile} from "../component/UserProfile/UserProfile";
+import {Logo} from "../component/Header/Logo";
+import {UserProfile} from "../component/Header/UserProfile";
 import {Accordion} from "../component/Accordion/Accordion";
 
 const { HOME_PAGE } = ROUTES;

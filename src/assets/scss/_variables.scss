@@ -1,11 +1,21 @@
-$main_color: #000;
-$second_color: #fff;
+$dark_color: #000;
+$white_color: #fff;
 $w_100: 100%;
 $position_rel: relative;
 $position_abs: absolute;
 $hidden: hidden;
 $transparent: transparent;
 $flex: flex;
+$margin_auto: 0 auto;
+$breakpoint_mobile_landscape: 767px;
+$breakpoint_mobile_portrait: 600px;
+$breakpoint_small_portrait: 320px;
+$breakpoint_min_tablet: 768px;
+$breakpoint_max_tablet: 900px;
+$breakpoint_min_laptop: 991px;
+$breakpoint_max_laptop: 1200px;
+$d_none: none;
+$d_block: block;
 
 
 

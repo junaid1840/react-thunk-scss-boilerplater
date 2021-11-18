@@ -1,5 +1,5 @@
 @import "../../assets/scss/mixin";
-#main-header {
+#header {
   @include d_flex;
   padding: 0 0;
   .header-logo{
@@ -20,12 +20,11 @@
         width: 50px;
         height: 50px;
         position: fixed;
-        display: none;
+        display: $d_none;
         padding: 10px;
         left: 0;
         top: 0;
-        cursor: pointer;
-        background: $main_color;
+        background: $dark_color;
         border-radius: 0 5px 5px 0;
       }
       //&.active {}
@@ -40,7 +39,7 @@
         @include flex_ul;
         position: $position_rel;
         li{
-          list-style: none;
+          list-style: $d_none;
           padding: 10px 19px;
           font-size: 18px;
           position: $position_rel;
@@ -48,7 +47,6 @@
           cursor: pointer;
           .drop-down-arrow {
             width: 15px;
-            pointer-events: none;
             margin: 0 0 0 4px;
             @include transition;
           }
@@ -59,9 +57,9 @@
           }
           &:hover .drop-down-arrow { transform: scaleY(-1)}
           a {
-            color: $second_color;
-            text-decoration: none;
-            display: block;
+            color: $white_color;
+            text-decoration: $d_none;
+            display: $d_block;
             padding: 20px 0;
           }
         }
@@ -111,14 +109,14 @@
     .user-profile {
       align-self: center;
       position: $position_rel;
-      a {display: block;}
+      a {display: $d_block;}
       img {
         @include user_img;
         width: 40px;
         height: 40px;
       }
       span {
-        color: $second_color;
+        color: $white_color;
         display: inline-block;
         padding: 9px 0 0 10px;
         font-size: 13px;
@@ -144,16 +142,16 @@
         flex-direction: column;
         border-radius: 5px;
         width: 160px;
-        background: $main_color;
+        background: $dark_color;
         margin: 0 0 0;
         visibility: hidden;
         opacity: 0;
         a {
-          display: block;
+          display: $d_block;
           padding: 4px 0;
           font-size: 13px;
-          color: $second_color;
-          text-decoration: none;
+          color: $white_color;
+          text-decoration: $d_none;
         }
       }
       &.active section {

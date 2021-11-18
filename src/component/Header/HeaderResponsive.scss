@@ -1,6 +1,7 @@
+@import "../../assets/scss/mixin";
 //For Tabs
-@media (min-width:768px) and (max-width:990px){
-  #main-header{
+@media (min-width:$breakpoint_min_tablet) and (max-width:$breakpoint_max_tablet){
+  #header{
     padding: 5px 0;
     .header-logo{
       justify-content: center;
@@ -14,9 +15,9 @@
       .header-navigation {
         position: fixed;
         top: 0;
-        background: #000;
+        background: $dark_color;
         width: 250px;
-        left: -100%;
+        left: -$w_100;
         z-index: 999;
         height: 100vh;
         padding-top: 0;
@@ -25,10 +26,10 @@
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
           flex-direction: column;
-          background: #000;
+          background: $dark_color;
           padding-top: 35px;
           li {
-            display: block;
+            display: $d_block;
             padding: 5px 19px;
             font-size: 16px;
             .drop-down-arrow {
@@ -48,16 +49,16 @@
         }
       }
       .dropdownList {
-        position: relative;
+        position: $position_rel;
         padding: 6px 15px;
-        width: 100%;
+        width: $w_100;
         background: #222;
         margin: 13px 0 0;
-        display: none;
+        display: $d_none;
         opacity: 1;
         visibility: visible;
-        &:before { display: none}
-        &.active { display: block;}
+        &:before { display: $d_none}
+        &.active { display: $d_block;}
       }
       .user-profile {
         justify-content: right;
@@ -67,10 +68,10 @@
           margin-top: 10px;
         }
         section {
-          border: 1px solid #fff;
+          border: 1px solid $white_color;
           z-index: 999;
         }
-        span { display: none}
+        span { display: $d_none}
         .arrow-down { margin-top: 12px}
       }
     }
@@ -78,8 +79,8 @@
 }
 
 //For Mobile Landscape
-@media (max-width:767px){
-  #main-header{
+@media (max-width:$breakpoint_mobile_landscape){
+  #header{
     padding: 5px 0;
     .header-logo{
       justify-content: center;
@@ -93,9 +94,9 @@
       .header-navigation {
         position: fixed;
         top: 0;
-        background: #000;
+        background: $dark_color;
         width: 250px;
-        left: -100%;
+        left: -$w_100;
         z-index: 999;
         height: 100vh;
         padding-top: 0;
@@ -104,14 +105,14 @@
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
           flex-direction: column;
-          background: #000;
+          background: $dark_color;
           padding-top: 35px;
           li {
-            display: block;
+            display: $d_block;
             padding: 5px 19px;
             font-size: 16px;
             &:hover .dropdownList { margin-top: 13px;}
-            &.active .dropdownList { display: block;}
+            &.active .dropdownList { display: $d_block;}
             &.active .drop-down-arrow {
               transform: scaleY(-1) !important;
             }
@@ -134,15 +135,15 @@
         }
       }
       .dropdownList {
-        position: relative;
+        position: $position_rel;
         padding: 6px 15px;
-        width: 100%;
+        width: $w_100;
         background: #222;
         margin: 13px 0 0;
-        display: none;
+        display: $d_none;
         opacity: 1;
         visibility: visible;
-        &:before { display: none}
+        &:before { display: $d_none}
       }
       .user-profile {
         justify-content: right;
@@ -152,10 +153,10 @@
           margin-top: 10px;
         }
         section {
-          border: 1px solid #fff;
+          border: 1px solid $white_color;
           z-index: 999;
         }
-        span { display: none}
+        span { display: $d_none}
         .arrow-down { margin-top: 12px}
       }
     }
@@ -163,10 +164,10 @@
 }
 
 //For Mobiles
-@media (max-width:600px){}
+@media (max-width:$breakpoint_mobile_portrait){}
 
 //For small Mobiles
-@media (max-width:320px){}
+@media (max-width:$breakpoint_small_portrait){}
 
 //For Ipad Pro and mini laptops
-@media screen and (min-width:991px) and (max-width:1200px){}
+@media screen and (min-width:$breakpoint_min_laptop) and (max-width:$breakpoint_max_laptop){}
