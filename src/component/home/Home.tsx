@@ -6,17 +6,14 @@ import {
 import { GlobalContext } from "../../services/context/GlobalContext";
 
 export const Home: FC = () => {
-  const { showLoader, setShowLoader, globalDispatch } =
-    useContext(GlobalContext);
+  const { showLoader, globalDispatch } = useContext(GlobalContext);
 
   const successCall = async () => {
-    setShowLoader(true);
     const data = await globalDispatch(successEffect);
     alert(data.response);
   };
 
   const failureCall = async () => {
-    setShowLoader(true);
     const data = await globalDispatch(failureEffect);
     alert(data.error);
   };

@@ -3,7 +3,7 @@ import { AxiosResponse } from "axios";
 
 type axiosMethodTypes = "GET" | "POST" | "DELETE" | "PUT" | "PATCH";
 
-const apiManager = {
+export const apiManager = {
   request: async (
     url: string,
     body: unknown,
@@ -22,4 +22,3 @@ const apiManager = {
     }
   },
 };
-export default apiManager;

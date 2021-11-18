@@ -15,17 +15,17 @@ export const GlobalProvider: FC<iGlobalProviderProps> = ({
   const [showLoader, setShowLoader] = useState(false);
 
   const globalDispatch = async (
-    effect: (dispatch: Dispatch<bookActionTypes>) => Promise<iApiResponse>
+    effect: (dispatch: Dispatch<bookActionTypes>) => Promise<iApiResponse>,
+    showLoader = true
   ): Promise<iApiResponse> => {
-    const data = await dispatch(effect);
+    setShowLoader(showLoader);
+    const data = (await dispatch(effect)) as unknown as iApiResponse;
     setShowLoader(false);
-    return data as unknown as iApiResponse;
+    return data;
   };
 
   return (
-    <GlobalContext.Provider
-      value={{ showLoader, setShowLoader, globalDispatch }}
-    >
+    <GlobalContext.Provider value={{ showLoader, globalDispatch }}>
       {children}
     </GlobalContext.Provider>
   );

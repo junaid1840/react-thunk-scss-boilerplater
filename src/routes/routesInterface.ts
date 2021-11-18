@@ -5,7 +5,7 @@ export interface iProps extends RouteComponentProps {
   routes?: iRoutes[];
 }
 
-export default interface iRoutes {
+export interface iRoutes {
   // basic props
   path: string;
   exact: boolean;

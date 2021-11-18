@@ -1,4 +1,4 @@
-import apiManager from "../api-manager/apiManager";
+import { apiManager } from "../api-manager/apiManager";
 import { iApiResponse } from "../api-manager/apiManagerInterfaces";
 
 export const successService = async (): Promise<iApiResponse> => {

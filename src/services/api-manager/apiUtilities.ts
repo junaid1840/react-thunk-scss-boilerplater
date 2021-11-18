@@ -1,6 +1,6 @@
 import { AxiosResponse } from "axios";
 import { iApiResponse, iErrorHandler } from "./apiManagerInterfaces";
-import apiManager from "./apiManager";
+import { apiManager } from "./apiManager";
 import { axiosInstance } from "./axiosInstance";
 
 let isRefreshing = false;

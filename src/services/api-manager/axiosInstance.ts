@@ -2,7 +2,6 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { ApiErrorHandler } from "./apiUtilities";
 
 export const axiosInstance: AxiosInstance = axios.create({
-  baseURL: "",
   responseType: "json",
   validateStatus: (status: number) => status >= 200,
   headers: {
