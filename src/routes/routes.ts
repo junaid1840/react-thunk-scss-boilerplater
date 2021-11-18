@@ -2,13 +2,9 @@ import iRoutes from "./routesInterface";
 import { Home } from "../component/home/Home";
 import { ROUTES } from "./routeConstants";
 import { Header } from "../component/Header/Header";
-import {Logo} from "../component/Header/Logo";
-import {UserProfile} from "../component/Header/UserProfile";
 
 const { HOME_PAGE } = ROUTES;
 const { HEADER } = ROUTES;
-const { LOGO } = ROUTES;
-const { USER_PROFILE } = ROUTES;
 
 const routes: iRoutes[] = [
   {
@@ -20,17 +16,7 @@ const routes: iRoutes[] = [
     path: HEADER,
     exact: true,
     component: Header,
-  },
-  {
-    path: LOGO,
-    exact: true,
-    component: Logo,
-  },
-  {
-    path: USER_PROFILE,
-    exact: true,
-    component: UserProfile,
-  },
+  }
 ];
 
 export default routes;
