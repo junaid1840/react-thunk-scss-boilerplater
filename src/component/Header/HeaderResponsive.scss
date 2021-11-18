@@ -1,7 +1,7 @@
 @import "../../assets/scss/mixin";
 //For Tabs
 @media (min-width:$breakpoint_min_tablet) and (max-width:$breakpoint_max_tablet){
-  #main-header{
+  #header{
     padding: 5px 0;
     .header-logo{
       justify-content: center;
@@ -50,7 +50,7 @@
 
 //For Mobile Landscape
 @media (max-width:$breakpoint_mobile_landscape){
-  #main-header{
+  #header{
     padding: 5px 0;
     .header-logo{
       justify-content: center;
