@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './Header.scss';
 import './HeaderResponsive.scss';
 import {Logo} from "../Logo/Logo";
