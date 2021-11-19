@@ -4,9 +4,7 @@ type Props = {
     question: string,
 };
 export const AccordionItems: FC<Props> = ({ question, answer }) => {
-
     const [isActive, setIsActive] = useState(false);
-
     return (
         <div className="accordions-box" onClick={() => setIsActive(!isActive)}>
             <div className="accordions-title"><h2>{question}</h2> <span>{isActive ? '-' : '+'}</span></div>
