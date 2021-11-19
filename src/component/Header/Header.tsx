@@ -1,7 +1,6 @@
 import React from 'react';
 import './header.scss';
 import './HeaderResponsive.scss';
-
 function Header() {
     return (
         <>
@@ -11,5 +10,4 @@ function Header() {
         </>
     );
 }
-
 export default Header;

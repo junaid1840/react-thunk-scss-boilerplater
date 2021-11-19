@@ -1,19 +1,15 @@
 @import "../../assets/scss/mixin";
 //For Tabs
 @media (min-width:$breakpoint_min_tablet) and (max-width:$breakpoint_max_tablet){}
-
 //For Mobile Landscape
 @media (max-width:$breakpoint_mobile_landscape){
   #header{
     h1 {font-size: 20px;}
   }
 }
-
 //For Mobiles
 @media (max-width:$breakpoint_mobile_portrait){}
-
 //For small Mobiles
 @media (max-width:$breakpoint_small_portrait){}
-
 //For Ipad Pro and mini laptops
 @media screen and (min-width:$breakpoint_min_laptop) and (max-width:$breakpoint_max_laptop){}
