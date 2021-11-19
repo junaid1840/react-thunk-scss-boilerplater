@@ -24,7 +24,7 @@
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
 }
-@mixin position_abs_right{
+@mixin position_abs_right {
   position: $position_abs;
   right: 0;
   top: 0;
