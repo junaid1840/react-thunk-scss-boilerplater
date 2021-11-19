@@ -104,3 +104,9 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   content: '';
 }
 .main-bg { background: $dark_color;}
+.position_abs_right {
+  @include position_abs_right;
+}
+.position_abs_left {
+  @include position_abs_left;
+}

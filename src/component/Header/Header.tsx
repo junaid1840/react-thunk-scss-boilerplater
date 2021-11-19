@@ -1,13 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './header.scss';
 import './HeaderResponsive.scss';
-function Header() {
+export const Header: FC = () => {
     return (
-        <>
-            <header id="header">
-                <h1>Hello</h1>
-            </header>
-        </>
+        <header id="header">
+            <h1>Hello</h1>
+        </header>
     );
 }
-export default Header;
