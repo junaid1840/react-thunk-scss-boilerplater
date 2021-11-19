@@ -4,18 +4,15 @@ import './HeaderResponsive.scss';
 import {Logo} from "./Logo";
 import {UserProfile} from "./UserProfile";
 import { NavLink } from 'react-router-dom';
-
 export const Header: FC = () => {
     // Start click function for menu
     const [menuToggled, setMenuToggled] = useState(false);
     const ToggleMenu = () => {menuToggled ? setMenuToggled(false) : setMenuToggled(true);}
     // End click function for menu
-
     // Start dropdown function for menu
     const [dropdownToggled, setDropdownToggled] = useState(false);
     const DropdownToggle = () => {dropdownToggled ? setDropdownToggled(false) : setDropdownToggled(true);}
     // End dropdown function for menu
-
     return (
         <>
             <div id="header" className="w-100 main-bg">

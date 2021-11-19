@@ -77,7 +77,6 @@
     }
   }
 }
-
 //For Mobile Landscape
 @media (max-width:$breakpoint_mobile_landscape){
   #header{
@@ -162,12 +161,9 @@
     }
   }
 }
-
 //For Mobiles
 @media (max-width:$breakpoint_mobile_portrait){}
-
 //For small Mobiles
 @media (max-width:$breakpoint_small_portrait){}
-
 //For Ipad Pro and mini laptops
 @media screen and (min-width:$breakpoint_min_laptop) and (max-width:$breakpoint_max_laptop){}

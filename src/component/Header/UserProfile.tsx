@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
 import { NavLink } from 'react-router-dom';
-
 export const UserProfile: FC = () => {
     // Start Open function for Userprofile
     const [userprofileToggled, setUserprofileToggled] = useState(false);
@@ -8,10 +7,8 @@ export const UserProfile: FC = () => {
         userprofileToggled ? setUserprofileToggled(false) : setUserprofileToggled(true);
     }
     // End Open function for Userprofile
-
     // User Image
     let UserImage = "/images/user-image.jpg";
-
     return (
         <>
             <div className={`user-profile ${userprofileToggled ? "active" : ""}`}>
