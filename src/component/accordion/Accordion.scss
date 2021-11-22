@@ -24,8 +24,8 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 23px;
-        background: #000;
-        color: #fff;
+        background: $dark_color;
+        color: $white_color;
         width: 27px;
         height: 27px;
         text-align: center;
@@ -35,11 +35,11 @@
     }
     .accordions-content-wrap {
       max-height: 0;
-      transition: max-height 0.15s ease-out;
+      transition: max-height linear 0.3s;
       overflow: hidden;
       &.active {
         max-height: 200px;
-        transition: max-height 0.25s ease-in;
+        transition: max-height linear 0.6s;
         opacity: 1;
       }
       .accordions-content {
