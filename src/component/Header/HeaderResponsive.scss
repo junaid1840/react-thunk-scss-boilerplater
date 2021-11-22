@@ -6,16 +6,17 @@
     .header-logo{
       justify-content: center;
       display: flex;
-      a img {
+      padding-left: 15px;
+      img {
         width: 100px;
       }
     }
     .header-content-wrap {
-      & > div { flex-grow: 3}
+      & > * { flex-grow: 3}
       .header-navigation {
         position: fixed;
         top: 0;
-        background: $dark_color;
+        background: var(--color-page-background);
         width: 250px;
         left: -$w_100;
         z-index: 999;
@@ -26,7 +27,7 @@
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
           flex-direction: column;
-          background: $dark_color;
+          background: var(--color-page-background);
           padding-top: 35px;
           li {
             display: $d_block;
@@ -64,11 +65,11 @@
         justify-content: right;
         display: flex;
         flex: 0 0 60px;
-        &.active section{
+        &.active .nav-dropdown {
           margin-top: 10px;
         }
-        section {
-          border: 1px solid $white_color;
+        .nav-dropdown {
+          border: 1px solid var(--border);
           z-index: 999;
         }
         span { display: $d_none}
@@ -84,16 +85,17 @@
     .header-logo{
       justify-content: center;
       display: flex;
-      a img {
+      padding-left: 15px;
+      img {
         width: 100px;
       }
     }
     .header-content-wrap {
-      & > div { flex-grow: 3}
+      & > * { flex-grow: 3}
       .header-navigation {
         position: fixed;
         top: 0;
-        background: $dark_color;
+        background: var(--color-page-background);
         width: 250px;
         left: -$w_100;
         z-index: 999;
@@ -104,7 +106,7 @@
         .open-menu-btn,.close-menu-btn { display: block}
         & > ul {
           flex-direction: column;
-          background: $dark_color;
+          background: var(--color-page-background);
           padding-top: 35px;
           li {
             display: $d_block;
@@ -148,11 +150,11 @@
         justify-content: right;
         display: flex;
         flex: 0 0 60px;
-        &.active section{
+        &.active .nav-dropdown {
           margin-top: 10px;
         }
-        section {
-          border: 1px solid $white_color;
+        .nav-dropdown {
+          border: 1px solid var(--border);
           z-index: 999;
         }
         span { display: $d_none}

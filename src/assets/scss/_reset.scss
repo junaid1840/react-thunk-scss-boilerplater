@@ -11,18 +11,28 @@
   url('../fonts/ArialMTBlack.ttf') format('truetype');
   @include font_face_design;
 }
+:root {
+  --color-page-background: #{$white_color};
+  --color-text: #{$dark_color};
+  --border: #{$dark_color};
+}
+.dark {
+  --color-page-background: #{$dark_color};
+  --color-text: #{$white_color};
+  --border: #{$white_color};
+}
 body {
   margin: 0;
-  color: var(--body-text-color);
+  color: var(--color-text);
   -webkit-text-size-adjust:  $w_100;
   -ms-text-size-adjust: none;
-  font-size: 16px;
-  font-family: 'ArialMT', serif;
-  background: $white_color;
+  font: 16px/24px 'ArialMT', serif;
+  background: var(--color-page-background);
   overflow-x: $hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1,h2,h3,h4,h5,h6 { line-height: 1.5;}
 .w-100 {
   width: $w_100;
 }
@@ -69,7 +79,7 @@ input[type="tel"],
 input[type="number"],
 input[type="date"],
 select{
-  color:$dark_color;
+  color:var(--color-text);
 }
 input[type="date"]::-webkit-calendar-picker-indicator{
   background: $transparent;
@@ -89,8 +99,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   overflow: $hidden;
 }
 .container{
-  width: 1200px;
-  max-width: $w_100;
+  width: $w_100;
+  max-width: 1200px;
   padding: 0 15px;
   margin: $margin_auto;
 }
@@ -103,7 +113,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   clear: both;
   content: '';
 }
-.main-bg { background: $dark_color;}
+.main-bg { background: var(--color-page-background);}
 .position_abs_right {
   @include position_abs_right;
 }
