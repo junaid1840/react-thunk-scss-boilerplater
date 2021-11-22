@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 export const UserProfile: FC = () => {
     // Start Open function for Userprofile
@@ -6,11 +6,23 @@ export const UserProfile: FC = () => {
     const OpenProfile = () => {
         userprofileToggled ? setUserprofileToggled(false) : setUserprofileToggled(true);
     }
+    const ref = useRef<HTMLDivElement>(null);
+    const handleClickOutside = (event: { target: any; }) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setUserprofileToggled(false);
+        }
+    };
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside, true);
+        return () => {
+            document.removeEventListener("click", handleClickOutside, true);
+        };
+    });
     // End Open function for Userprofile
     // User Image
     let UserImage = "/images/user-image.jpg";
     return (
-        <div className={`user-profile ${userprofileToggled ? "active" : ""}`}>
+        <div className={`user-profile ${userprofileToggled ? "active" : ""}`} ref={ref}>
             <a href="javascript:void(0)" onClick={OpenProfile}>
                 <img src={UserImage} alt="User Image" />
                 <span>Rebel Tech</span>
