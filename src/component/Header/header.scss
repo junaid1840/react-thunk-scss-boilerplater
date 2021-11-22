@@ -3,7 +3,7 @@
   @include d_flex;
   padding: 0 0;
   .header-logo{
-    a img {
+    img {
       width: 150px;
     }
   }
@@ -24,10 +24,9 @@
         padding: 10px;
         left: 0;
         top: 0;
-        background: $dark_color;
+        background: var(--color-page-background);
         border-radius: 0 5px 5px 0;
       }
-      //&.active {}
       .close-menu-btn {
         right: 0;
         left: unset;
@@ -39,7 +38,6 @@
         @include flex_ul;
         position: $position_rel;
         li{
-          list-style: $d_none;
           padding: 10px 19px;
           font-size: 18px;
           position: $position_rel;
@@ -57,7 +55,7 @@
           }
           &:hover .drop-down-arrow { transform: scaleY(-1)}
           a {
-            color: $white_color;
+            color: var(--color-text);
             text-decoration: $d_none;
             display: $d_block;
             padding: 20px 0;
@@ -85,13 +83,11 @@
         position: absolute;
         left: 13px;
         top: -10px;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
+        border-left: 10px solid $transparent;
+        border-right: 10px solid $transparent;
         border-bottom: 10px solid #444444;
       }
       ul {
-        padding: 0;
-        margin: 0;
         li {
           padding: 5px 0;
           font-size: 16px;
@@ -116,7 +112,7 @@
         height: 40px;
       }
       span {
-        color: $white_color;
+        color: var(--color-text);
         display: inline-block;
         padding: 9px 0 0 10px;
         font-size: 13px;
@@ -132,7 +128,7 @@
         vertical-align: middle;
         @include transition;
       }
-      section {
+      .nav-dropdown {
         @include transition;
         position: absolute;
         right: 0;
@@ -142,7 +138,7 @@
         flex-direction: column;
         border-radius: 5px;
         width: 160px;
-        background: $dark_color;
+        background: var(--color-page-background);
         margin: 0 0 0;
         visibility: hidden;
         opacity: 0;
@@ -150,17 +146,21 @@
           display: $d_block;
           padding: 4px 0;
           font-size: 13px;
-          color: $white_color;
+          color: var(--color-text);
           text-decoration: $d_none;
         }
       }
-      &.active section {
+      &.active {
+        .nav-dropdown{
         margin: 22px 0 0;
         opacity: 1;
         visibility: visible;
+        }
       }
-      &.active .arrow-down {
-        transform: scaleY(-1);
+      &.active {
+        .arrow-down {
+          transform: scaleY(-1);
+        }
       }
     }
     //End Css fro User Image
