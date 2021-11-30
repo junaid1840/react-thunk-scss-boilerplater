@@ -1,10 +1,7 @@
-//For Tabs
-@media (min-width:768px) and (max-width:990px){}
-//For Mobile Landscape
-@media (max-width:767px){}
-//For Mobiles
-@media (max-width:600px){}
-//For small Mobiles
-@media (max-width:320px){}
-//For Ipad Pro and mini laptops
-@media screen and (min-width:991px) and (max-width:1200px){}
+@import "../../assets/scss/mixin";
+@media (max-width:$breakpoint_laptop){}
+@media (max-width:$breakpoint_mini_laptop){}
+@media (max-width:$breakpoint_tablet){}
+@media (max-width:$breakpoint_mobile_landscape){}
+@media (max-width:$breakpoint_mobile_portrait){}
+@media (max-width:$breakpoint_small_portrait){}

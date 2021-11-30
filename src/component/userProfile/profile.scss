@@ -1,0 +1,63 @@
+@import "../../assets/scss/mixin";
+.user-profile {
+  align-self: center;
+  position: $position_rel;
+  a {display: $d_block;}
+  img {
+    @include user_img;
+    width: 40px;
+    height: 40px;
+  }
+  span {
+    color: var(--color-text);
+    display: inline-block;
+    padding: 9px 0 0 10px;
+    font-size: 13px;
+    position: $position_rel;
+    &:before {
+      @include _before_position_abs;
+    }
+  }
+  .arrow-down {
+    width: 14px;
+    margin: 0 0 0 3px;
+    display: inline-block;
+    vertical-align: middle;
+    @include transition;
+  }
+  .nav-dropdown {
+    @include transition;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 160px;
+    background: var(--color-page-background);
+    margin: 0 0 0;
+    visibility: hidden;
+    opacity: 0;
+    a {
+      display: $d_block;
+      padding: 4px 0;
+      font-size: 13px;
+      color: var(--color-text);
+      text-decoration: $d_none;
+    }
+  }
+  &.active {
+    .nav-dropdown{
+      margin: 22px 0 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &.active {
+    .arrow-down {
+      transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+    }
+  }
+}

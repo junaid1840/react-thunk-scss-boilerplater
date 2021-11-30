@@ -1,0 +1,16 @@
+@import "../../assets/scss/mixin";
+#header {
+  @include d_flex;
+  padding: 0 0;
+  .header-logo{
+    img {
+      width: 150px;
+    }
+  }
+  .header-logo { align-self: center}
+  .header-content-wrap {
+    display: $flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

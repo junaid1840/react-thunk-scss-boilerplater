@@ -1,0 +1,61 @@
+@import "../../assets/scss/mixin";
+@media (max-width:$breakpoint_laptop){}
+@media (max-width:$breakpoint_mini_laptop){}
+@media (max-width:$breakpoint_tablet){
+  .header-navigation {
+    position: fixed;
+    top: 0;
+    background: var(--color-page-background);
+    width: 250px;
+    left: -$w_100;
+    z-index: 999;
+    height: 100vh;
+    padding-top: 0;
+    overflow: auto;
+    &.active {left: 0;}
+    .open-menu-btn,.close-menu-btn { display: block}
+    & > ul {
+      flex-direction: column;
+      background: var(--color-page-background);
+      padding-top: 35px;
+      li {
+        display: $d_block;
+        padding: 5px 19px;
+        font-size: 16px;
+        .drop-down-arrow {
+          position: absolute;
+          right: 4px;
+          top: 3px;
+          width: 28px;
+          height: 28px;
+          padding: 5px;
+          background: #333;
+          border-radius: 3px;
+        }
+        a {
+          padding: 2px 0;
+        }
+        &.active{
+          .dropdownList {
+            display: $d_block;
+            margin: 13px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .dropdownList {
+    position: $position_rel;
+    padding: 6px 15px;
+    width: $w_100;
+    background: #222;
+    margin: 13px 0 0;
+    display: $d_none;
+    opacity: 1;
+    visibility: visible;
+    &:before { display: $d_none}
+  }
+}
+@media (max-width:$breakpoint_mobile_landscape){}
+@media (max-width:$breakpoint_mobile_portrait){}
+@media (max-width:$breakpoint_small_portrait){}

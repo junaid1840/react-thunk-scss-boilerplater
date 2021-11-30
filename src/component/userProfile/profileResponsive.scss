@@ -1,0 +1,23 @@
+@import "../../assets/scss/mixin";
+@media (max-width:$breakpoint_laptop){}
+@media (max-width:$breakpoint_mini_laptop){}
+@media (max-width:$breakpoint_tablet){
+.user-profile {
+  justify-content: right;
+  display: flex;
+  flex: 0 0 60px;
+  max-width: 60px;
+  &.active .nav-dropdown {
+    margin-top: 10px;
+  }
+  .nav-dropdown {
+    border: 1px solid var(--border);
+    z-index: 999;
+  }
+  span { display: $d_none}
+  .arrow-down { margin-top: 12px}
+}
+}
+@media (max-width:$breakpoint_mobile_landscape){}
+@media (max-width:$breakpoint_mobile_portrait){}
+@media (max-width:$breakpoint_small_portrait){}

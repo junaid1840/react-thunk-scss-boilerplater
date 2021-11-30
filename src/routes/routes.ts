@@ -1,8 +1,8 @@
 import iRoutes from "./routesInterface";
 import { Home } from "../component/home/Home";
 import { ROUTES } from "./routeConstants";
-import { Header } from "../component/Header/Header";
-import {Accordion} from "../component/accordion/Accordion";
+import { Header } from "../component/header/Header";
+import { Accordion } from "../component/accordion/Accordion";
 
 const { HOME_PAGE } = ROUTES;
 const { HEADER } = ROUTES;
