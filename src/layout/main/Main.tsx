@@ -6,7 +6,7 @@ import { GlobalProvider } from "../../services/context/GlobalProvider";
 export const Main = (): JSX.Element => {
   return (
     <>
-        <GlobalProvider>{<RouteWithSubRoutes routes={routes} />}</GlobalProvider>
+      <GlobalProvider>{<RouteWithSubRoutes routes={routes} />}</GlobalProvider>
     </>
 
     // Add footer here
