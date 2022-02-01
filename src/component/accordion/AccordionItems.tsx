@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useRef, useState } from "react";
 type Props = {
   answer: string;
   question: string;
@@ -6,17 +6,6 @@ type Props = {
 export const AccordionItems: FC<Props> = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const handleClickOutside = (event: { target: any }) => {
-    if (ref.current && !ref.current.contains(event.target)) {
-      setIsActive(false);
-    }
-  };
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-    return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  });
   return (
     <div className="accordions-box" ref={ref}>
       <div className="accordions-title" onClick={() => setIsActive(!isActive)}>
