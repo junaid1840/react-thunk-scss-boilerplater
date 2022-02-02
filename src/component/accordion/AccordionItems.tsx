@@ -13,7 +13,7 @@ export const AccordionItems: FC<Props> = ({ question, answer }) => {
       </div>
       <div className={`accordions-content-wrap ${isActive ? "active" : ""}`}>
         <div className="accordions-content">
-          <p>{answer}</p>
+          <p>{answer} </p>
         </div>
       </div>
     </div>
