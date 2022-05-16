@@ -28,7 +28,9 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "prettier/prettier": "error",
+        "prettier/prettier": ["error",{
+            "endOfLine": "auto"
+        }],
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off"
     }
