@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { RouteComponentProps } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
-export interface iProps extends RouteComponentProps {
+export interface iProps extends RouteProps {
   routes?: iRoutes[];
 }
 
@@ -11,9 +11,9 @@ export interface iRoutes {
   exact: boolean;
   component: FC<iProps>;
   // Sub routes
-  routes?: iRoutes[];
+  children?: iRoutes[];
   // Redirect path
-  redirect?: string;
+  index?: boolean;
   // If router is private, this is going to be true
-  private?: boolean;
+  isPrivate?: boolean;
 }
