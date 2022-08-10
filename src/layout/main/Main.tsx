@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.scss";
 import { routes } from "../../routes/routes";
-import { RouteWithSubRoutes } from "../../routes/routeWithSubRoutes";
+import { RouteWithSubRoutes } from "../../routes/RouteWithSubRoutes";
 import { GlobalProvider } from "../../services/context/GlobalProvider";
 import { Header } from "../../component/header/Header";
 
